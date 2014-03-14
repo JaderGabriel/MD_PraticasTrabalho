@@ -12,8 +12,8 @@ import smtplib
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
 password = ''
-sender = 'jadergabriel8@gmail.com'
-recipient = 'programacaoeti@outlook.com'
+sender = ''
+recipient = ''
 subject = 'Gmail SMTP Test'
 body = 'blah blah blah'
 
