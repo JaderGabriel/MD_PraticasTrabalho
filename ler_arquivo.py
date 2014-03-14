@@ -34,7 +34,7 @@ artista_nota = []
 nota = []
 nota_por_artista = []
 f = open("dados_ordenados.txt","w")
-print (type(f))
+
 inicio(f)
 
 for linhas in dados:
@@ -74,7 +74,14 @@ for x in range (0,8):
   artista_nota = []
   nota = []
   nota_por_artista = []
+Usuario = input("\n\nNome do Usuário\n")
+Artista= input("Nome do Artista\n\n")
+user = str(Usuario)
+artst = str(Artista)
+teste = d.get(user).get(artst)
 
+print("Nota aferida por %s a %s, caso essa combinaçao exista:\n" %(user,artst))
+print(d[user][artst])
 f.write("end of file")
 f.close()
 

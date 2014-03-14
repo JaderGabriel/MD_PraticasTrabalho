@@ -1,6 +1,6 @@
 Jader Gabriel
 programacaoeti@outlook.com
-Ultima atualizacao: 2014-03-13 22:22:04.039586
+Ultima atualizacao: 2014-03-13 23:12:00.925270
 Copyright 2013
 ['Unimontes', 'CCET', 'DCC', 'Mineraçao de Dados', 'Prfº: Rene Veloso']
 Trabalho 1
