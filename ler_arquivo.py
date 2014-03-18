@@ -74,14 +74,19 @@ for x in range (0,8):
   artista_nota = []
   nota = []
   nota_por_artista = []
+print("\n")
+
 Usuario = input("\n\nNome do Usuário\n")
 Artista= input("Nome do Artista\n\n")
 user = str(Usuario)
 artst = str(Artista)
-teste = d.get(user).get(artst)
-
-print("Nota aferida por %s a %s, caso essa combinaçao exista:\n" %(user,artst))
-print(d[user][artst])
+teste = d.get(user)
+teste2 = teste.get(artst)
+if not teste or not teste2:
+    print('DONT MATCH')
+elif teste and teste2:
+    print("Nota aferida por %s a %s, caso essa combinaçao exista:\n" %(user,artst))
+    print(d[user][artst])
 f.write("end of file")
 f.close()
 
