@@ -4,7 +4,8 @@ import csv
 import pprint
 from datetime import datetime
 import math
-
+import manhattan
+import criar_dicionário
 def inicio(m):
     __author__ = "Jader Gabriel\n"
     __copyright__ = "\nCopyright 2013\n"
@@ -23,89 +24,23 @@ def inicio(m):
     m.write(__copyright__)
     m.write(__ta__)
     m.write(__status__)
-def soma_manhattan(user1, user2):
-
-    manhattan = 0
-    ## usar depois para ver se os dois dict tem as mesmas chaves
-    listaKey1 = user1.keys()
-    listaKey2 = user2.keys()
-    for i in listaKey1:
-        if(user1[(i)] != '-' and user2[(i)] != '-' ):
-            coord = abs(float(user1[(i)]) - float(user2[(i)]))
-            manhattan += coord
-    return manhattan
-def sugerir_manhattan(dicionario_completo, usuario_a_sugerir, lista_das_distancias):
-   lista_mais_proximo = sorted(lista_das_distancias)
-   sugerir = []
-   for sugestoes in dicionario_completo[lista_mais_proximo[0][1]]:
-       if(d[usuario_a_sugerir][sugestoes] == '-' and d[lista_mais_proximo[0][1]][sugestoes] != '-'):
-           sugerir.append(sugestoes)
-   return (sugerir)
-
+d = criar_dicionário.gerar_dicionário()
+f = open("dados_ordenados.txt","w")
 def conficiente_pearson(user1, user2):
 
     r = range (0,10)
     print(r)
     return r
 
-dados = csv.reader(open("dados1.csv","r"))
 
-linha_gerais = []
-linha_Artistas = []
-prof_notas = []
-dicionario = []
-artista_nota = []
-nota = []
-nota_por_artista = []
-f = open("dados_ordenados.txt","w")
-
-inicio(f)
-
-for linhas in dados:
-  linha_gerais.append(linhas)
-for x in range (1,9):
-  linha_Artistas.append(linha_gerais[(x)][0])
-  prof_notas.append(linha_gerais[0][(x)])
-for x in range (0,8):
-  nome = prof_notas[(x)]
-  dicionario.append((nome,()))
-  d = dict(dicionario)
-for x in range (0,8):
-  nome2 = prof_notas[(x)]
-
-  for m in range (0,8):
-    artista_nota.append(linha_Artistas[m])
-    nota.append(linha_gerais[m+1][x+1])
-    nota_por_artista.append((linha_Artistas[m] , linha_gerais[m+1][x+1]))
-  dicionario_notas_dadas = dict(nota_por_artista)
-  d[nome2] = dicionario_notas_dadas
-  print("\n")
-  pprint.pprint("NOTAS DADAS POR  %s A:--"  % prof_notas[(x)])
-  f.write("\n\nNOTAS DADAS POR  %s A:--\n"  % prof_notas[(x)])
-  print(d[prof_notas[(x)]])
-  #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
-  #print ("%-20s : %-7s" %("Nome", "Nota"))
-  #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
-  f.write("%-20s-+-%-7s\n" %("-" * 20, "-" * 7))
-  f.write("%-20s : %-7s\n" %("Nome", "Nota"))
-  f.write("%-20s-+-%-7s\n" %("-" * 20, "-" * 7))
-  for i in range(0,8):
-      #print("%-20s | %1s" %(artista_nota[(i)], nota[(i)]))
-      f.write("%-20s | %1s\n" %(artista_nota[(i)], nota[(i)]))
-  #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
-  f.write("%-20s-+-%-7s\n" %("-" * 20, "-" * 7))
-
-  artista_nota = []
-  nota = []
-  nota_por_artista = []
 for user1 in d:
     manhattan_proximidade = []
     for user2 in d:
         if(user1 != user2):
-            manhattan = soma_manhattan(user1=d[user1], user2=d[user2])
+            manhattan.soma_manhattan(user1=d[user1], user2=d[user2])
             manhattan_proximidade.append((manhattan,user2))
             #print("\nSoma de Manhattan entre %s e %s = %.2f" %(user1,user2,manhattan))
-    sugestao_a_usuario = sugerir_manhattan(dicionario_completo=d,usuario_a_sugerir=user1,lista_das_distancias=manhattan_proximidade)
+    sugestao_a_usuario = manhattan.sugerir_manhattan(dicionario_completo=d,usuario_a_sugerir=user1,lista_das_distancias=manhattan_proximidade)
     print("\nSegundo a formula de proximidade de Manhattan: \n%s gostará de %s" %(user1,sugestao_a_usuario))
     manhattan_proximidade= []
 
