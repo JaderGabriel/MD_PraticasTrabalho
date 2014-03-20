@@ -1,9 +1,9 @@
-#coding = utf-8
+#encoding = utf-8
 #!/usr/bin/ python
 import csv
 import pprint
 from datetime import datetime
-
+import math
 
 def inicio(m):
     __author__ = "Jader Gabriel\n"
@@ -23,6 +23,16 @@ def inicio(m):
     m.write(__copyright__)
     m.write(__ta__)
     m.write(__status__)
+def soma_manhattan(user1, user2):
+    manhattan = 0
+    ## usar depois para ver se os dois dict tem as mesmas chaves
+    listaKey1 = user1.keys()
+    listaKey2 = user2.keys()
+    for i in listaKey1:
+        if(user1[(i)] != '-' and user2[(i)] != '-' ):
+            coord = abs(float(user1[(i)]) - float(user2[(i)]))
+            manhattan += coord
+    return manhattan
 
 dados = csv.reader(open("dados1.csv","r"))
 
@@ -74,8 +84,12 @@ for x in range (0,8):
   artista_nota = []
   nota = []
   nota_por_artista = []
-print("\n")
-
+for user1 in d:
+    for user2 in d:
+        if(user1 != user2):
+            manhattan = soma_manhattan(d[user1], d[user2])
+            print(" Soma de Manhattan entre %s e %s = %.2f" %(user1,user2,manhattan))
+"""
 Usuario = input("\n\nNome do Usuário\n")
 Artista= input("Nome do Artista\n\n")
 user = str(Usuario)
@@ -87,6 +101,7 @@ if not teste or not teste2:
 elif teste and teste2:
     print("Nota aferida por %s a %s, caso essa combinaçao exista:\n" %(user,artst))
     print(d[user][artst])
+    """
 f.write("end of file")
 f.close()
 
