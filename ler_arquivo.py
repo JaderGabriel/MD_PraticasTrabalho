@@ -6,6 +6,7 @@ from datetime import datetime
 import math
 import manhattan
 import criar_dicionário
+import coeficiente_pearson
 def inicio(m):
     __author__ = "Jader Gabriel\n"
     __copyright__ = "\nCopyright 2013\n"
@@ -37,9 +38,11 @@ for user1 in d:
     manhattan_proximidade = []
     for user2 in d:
         if(user1 != user2):
+            print("\nRelaçoes entre %s e %s" %(user1,user2))
             manhattan.soma_manhattan(user1=d[user1], user2=d[user2])
             manhattan_proximidade.append((manhattan,user2))
-            #print("\nSoma de Manhattan entre %s e %s = %.2f" %(user1,user2,manhattan))
+            coeficiente_p = coeficiente_pearson.calcular_coeficiente(user1=d[user1],user2=d[user2])
+            print("COEFICIENTE DE PEARSON: %s " %coeficiente_p)
     sugestao_a_usuario = manhattan.sugerir_manhattan(dicionario_completo=d,usuario_a_sugerir=user1,lista_das_distancias=manhattan_proximidade)
     print("\nSegundo a formula de proximidade de Manhattan: \n%s gostará de %s" %(user1,sugestao_a_usuario))
     manhattan_proximidade= []

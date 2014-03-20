@@ -1,10 +1,4 @@
 __author__ = "Jader Gabriel\n"
-__copyright__ = "\nCopyright 2013\n"
-__tags__ = ["Unimontes", "CCET", "DCC",
-            "NOME DA DISCIPLINA", "Prfº: NOME DO PROFESSOR"]
-__license__ = "GPL"
-__email__ = "programacaoeti@outlook.com\n"
-__status__ = "\nTrabalho NRO DO TRABALHO\n"
 _data__ = '20/03/14'
 import pprint
 import csv
