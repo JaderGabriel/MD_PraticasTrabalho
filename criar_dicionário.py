@@ -30,10 +30,10 @@ def gerar_dicionário():
         nota_por_artista.append((linha_Artistas[m] , linha_gerais[m+1][x+1]))
       dicionario_notas_dadas = dict(nota_por_artista)
       d[nome2] = dicionario_notas_dadas
-      print("\n")
-      pprint.pprint("NOTAS DADAS POR  %s A:--"  % prof_notas[(x)])
+      #print("\n")
+      #pprint.pprint("NOTAS DADAS POR  %s A:--"  % prof_notas[(x)])
       f.write("\n\nNOTAS DADAS POR  %s A:--\n"  % prof_notas[(x)])
-      print(d[prof_notas[(x)]])
+      #print(d[prof_notas[(x)]])
       #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
       #print ("%-20s : %-7s" %("Nome", "Nota"))
       #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
