@@ -26,13 +26,13 @@ def inicio(m):
     m.write(__ta__)
     m.write(__status__)
 
-d = criar_dicionário.gerar_dicionário()
+d = criar_dicionário.gerar_dicionário_dados1()
 # Resposta questao 1a
 distancia = manhattan.soma_manhattan(user1=d['Ana'],user2=d['Jessica'])
 print("DISTANCIA DE MANHATTAN ENTRE %s e %s: %.3f\n" %('Ana','Jessica', distancia))
 print("QUESTAO 1e\n")
 m = knn.mais_proximos(use1='Jessica',dicionario_completo=d,k=3)
 recomendacao = knn.sugerir_por_knn(a_sugerir='Jessica',lista_ordenada=m,artista='B.B. King')
-
-
+print("\nQUESTAO 4a:\n")
+criar_dicionário.gerar_dicionario_filmes()
 

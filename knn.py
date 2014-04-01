@@ -1,6 +1,6 @@
 import pearson
 import criar_dicionário
-d = criar_dicionário.gerar_dicionário()
+d = criar_dicionário.gerar_dicionário_dados1()
 
 def mais_proximos(use1, dicionario_completo, k):
     pearson_proximidade = []

@@ -1,5 +1,5 @@
 import criar_dicionário
-d = criar_dicionário.gerar_dicionário()
+d = criar_dicionário.gerar_dicionário_dados1()
 def soma_manhattan(user1, user2):
     manhattan = 0
     ## usar depois para ver se os dois dict tem as mesmas chaves
