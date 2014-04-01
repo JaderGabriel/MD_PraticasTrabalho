@@ -1,1 +1,117 @@
-end of file
+Jader Gabriel
+programacaoeti@outlook.com
+Ultima atualizacao: 2014-04-01 11:37:15.110594
+Copyright 2013
+['Unimontes', 'CCET', 'DCC', 'Mineraçao de Dados', 'Prfº: Rene Veloso']
+Trabalho 1
+end of fileric Clapton         | 4.5
+Gary Smith           | 5
+B.B. King            | 1.5
+James Cotton         | 2.5
+Robert Johnson       | 2
+---------------------+--------
+
+
+NOTAS DADAS POR  Axel A:--
+---------------------+--------
+Nome                 : Nota   
+---------------------+--------
+Muddy Waters         | 2
+Junior Wells         | 3.5
+Bonnie Lee           | 4
+Eric Clapton         | -
+Gary Smith           | 2
+B.B. King            | 3.5
+James Cotton         | -
+Robert Johnson       | 3
+---------------------+--------
+
+
+NOTAS DADAS POR  Bruno A:--
+---------------------+--------
+Nome                 : Nota   
+---------------------+--------
+Muddy Waters         | 5
+Junior Wells         | 1
+Bonnie Lee           | 1
+Eric Clapton         | 3
+Gary Smith           | 5
+B.B. King            | 1
+James Cotton         | -
+Robert Johnson       | -
+---------------------+--------
+
+
+NOTAS DADAS POR  Daniel A:--
+---------------------+--------
+Nome                 : Nota   
+---------------------+--------
+Muddy Waters         | 3
+Junior Wells         | 4
+Bonnie Lee           | 4.5
+Eric Clapton         | -
+Gary Smith           | 3
+B.B. King            | 4.5
+James Cotton         | 4
+Robert Johnson       | 2
+---------------------+--------
+
+
+NOTAS DADAS POR  Jessica A:--
+---------------------+--------
+Nome                 : Nota   
+---------------------+--------
+Muddy Waters         | -
+Junior Wells         | 4
+Bonnie Lee           | 1
+Eric Clapton         | 4
+Gary Smith           | -
+B.B. King            | -
+James Cotton         | 4
+Robert Johnson       | 1
+---------------------+--------
+
+
+NOTAS DADAS POR  Larissa A:--
+---------------------+--------
+Nome                 : Nota   
+---------------------+--------
+Muddy Waters         | -
+Junior Wells         | 4.5
+Bonnie Lee           | 4
+Eric Clapton         | 5
+Gary Smith           | 5
+B.B. King            | 4.5
+James Cotton         | 4
+Robert Johnson       | 4
+---------------------+--------
+
+
+NOTAS DADAS POR  Nilton A:--
+---------------------+--------
+Nome                 : Nota   
+---------------------+--------
+Muddy Waters         | 5
+Junior Wells         | 2
+Bonnie Lee           | -
+Eric Clapton         | 3
+Gary Smith           | 5
+B.B. King            | 4
+James Cotton         | 5
+Robert Johnson       | -
+---------------------+--------
+
+
+NOTAS DADAS POR  Yuri A:--
+---------------------+--------
+Nome                 : Nota   
+---------------------+--------
+Muddy Waters         | 3
+Junior Wells         | -
+Bonnie Lee           | -
+Eric Clapton         | 5
+Gary Smith           | 3
+B.B. King            | 2.5
+James Cotton         | 3
+Robert Johnson       | -
+---------------------+--------

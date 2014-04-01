@@ -22,15 +22,12 @@ def calcular_coeficiente(user1, user2):
             x2 += x**2
             y2 += y**2
 
-    #print("somamamamaa")
-    #print(user1, user2)
+
     dividendo = (somatorio1 - (somatorioX*somatorioY/n))
     divisor = math.sqrt(x2-(somatorioX**2/n)) * math.sqrt(y2-(somatorioY**2/n))
     if(divisor != 0):
         coeficiente = dividendo/divisor
     #print( dividendo, divisor)
-    else:
-        coeficiente = 0
     return coeficiente
 def gerar_grafico(user1, user2, d):
     # ArrayX  = [ 200, 201, 202, 203 ]
