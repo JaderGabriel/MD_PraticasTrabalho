@@ -60,22 +60,42 @@ def gerar_dicionário_dados1():
       #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
 
 
-      # noinspection PyPep8,PyPep8
+
       artista_nota = []
-      # noinspection PyPep8
+
       nota = []
-      # noinspection PyPep8
+
       nota_por_artista = []
 
-
-    # noinspection PyPep8
     return d
-def gerar_dicionario_filmes():
-    dados = csv.reader(open("ml-100k/u.data","r"))
+def gerar_dicionario_filmes(s):
+    """
+    Gera dicionário do arquivo que se receber no parametro s, desde que esse esteja na pasta '/ml-100k'
+    """
+    dados = csv.reader(open("ml-100k/%s" %(s),"r"))
     print (dados)
     dados2 = []
+    a_procurar = 1
     for i in dados:
-      dados2.append(i)
-    dados2 = sorted(dados2)
-    for m in dados2:
-        print(m)
+        dados2.append(i)
+    return dados2
+def obter_dados_cerveja(s):
+    dados = csv.reader(open("beer_reviews/%s" %(s),"r"))
+    print (dados)
+    dados2 = []
+    a_procurar = 1
+    for i in dados:
+        dados2.append(i)
+    return dados2
+def gerar_dicionario_cervejas(lista_dados):
+    atributos_cerveja = []
+    atrb = []
+    for i in lista_dados[0]:
+        atributos_cerveja.append((i,()))
+        atrb.append(i)
+    dic_atributos = dict(atributos_cerveja)
+    print(atrb)
+    limite_superior = len(lista_dados)
+    for i in range (1,limite_superior):
+        if 'Brahma' in lista_dados[(i)]:
+            print(lista_dados[(i)])

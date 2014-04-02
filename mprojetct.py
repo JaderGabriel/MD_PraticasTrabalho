@@ -1,7 +1,7 @@
 import manhattan
-import criar_dicionário
+import manipular_files
 import pearson
-d = criar_dicionário.gerar_dicionário()
+d = manipular_files.gerar_dicionário()
 for user1 in d:
     manhattan_proximidade = []
     for user2 in d:
