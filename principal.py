@@ -6,7 +6,7 @@ import manhattan
 import manipular_files
 import listar_diretorio as dir
 import pearson
-
+import mprojetct as p
 
 def inicio(m):
     __author__ = "Jader Gabriel\n"
@@ -28,14 +28,19 @@ def inicio(m):
     m.write(__status__)
 
 d = manipular_files.gerar_dicionário_dados1()
-# Resposta questao 1a
+print("-----------------QUESTAO 1a-------------------------")
 distancia = manhattan.soma_manhattan(user1=d['Ana'],user2=d['Jessica'])
 print("DISTANCIA DE MANHATTAN ENTRE %s e %s: %.3f\n" %('Ana','Jessica', distancia))
-print("QUESTAO 1e\n")
+print("-----------------QUESTAO 1e-------------------------")
 m = knn.mais_proximos(use1='Jessica',dicionario_completo=d,k=3)
 recomendacao = knn.sugerir_por_knn(a_sugerir='Jessica',lista_ordenada=m,artista='B.B. King')
+print("-----------------QUESTAO 1f-------------------------")
+for i in d:
+    if d[(i)]['Gary Smith'] != '-':
+        print("\n__________%s DEU NOTA A GARY SMITH" %i)
+        p.sugerir_por_nota(i)
 print("\nQUESTAO 4a:\n")
-items_filmes = dir.listar_diretorio()
+"""items_filmes = dir.listar_diretorio()
 items_cerveja = dir.listar_diretorio2()
 bd_cerveja = manipular_files.obter_dados_cerveja(items_cerveja[0])
 manipular_files.gerar_dicionario_cervejas(lista_dados=bd_cerveja)
@@ -48,5 +53,5 @@ for i in range (3,limite_superior):
     print('NUMERO DE ELEMENTOS DA LISTA %s: '%items_filmes[(i)],len(var_input))
 #criar_dicionário.gerar_dicionario_filmes(s='ub.test')
 
-
+"""
 

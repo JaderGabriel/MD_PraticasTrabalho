@@ -11,6 +11,7 @@ def calcular_coeficiente(user1, user2):
     coeficiente = 0
     n = 0
     listaKey1 = user1.keys()
+
     for i in listaKey1:
         if(user1[(i)] !="-" and user2[(i)] !="-"):
             n += 1
@@ -49,4 +50,3 @@ def gerar_grafico(user1, user2, d):
     plt.title("Grafico de Pearson para %s e %s" %(user1,user2), fontsize = 20)
     plt.bar(listaX_user1, listaY_user2, 10 )
     plt.show()
-

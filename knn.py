@@ -14,18 +14,19 @@ def mais_proximos(use1, dicionario_completo, k):
                 pearson_proximidade.append((coeficiente,user2))
 
     m=sorted(pearson_proximidade)
+    x=m.reverse()
     for i in range(0,k):
         g.append(m[i])
     print("Lista de k mais proximos à %s:\n" %(use1),g)
+
     return g
+
 def sugerir_por_knn(a_sugerir,lista_ordenada, artista):
     total = 0
     lista_influencia = []
     recomendaçao = 0
     for i in lista_ordenada:
-
         total += i[0]
-
     for i in lista_ordenada:
         recomendaçao += i[0]/total * float(d[(i[1])][artista])
         #float(i[0]/total,i[1]) * float(d[(i[1])][artista])

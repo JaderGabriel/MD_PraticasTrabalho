@@ -48,19 +48,6 @@ def gerar_dicionário_dados1():
       dicionario_notas_dadas = dict(nota_por_artista)
       # noinspection PyPep8
       d[nome2] = dicionario_notas_dadas
-      #print("\n")
-      #pprint.pprint("NOTAS DADAS POR  %s A:--"  % prof_notas[(x)])
-
-      #print(d[prof_notas[(x)]])
-      #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
-      #print ("%-20s : %-7s" %("Nome", "Nota"))
-      #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
-      #for i in range(0,8):
-          #print("%-20s | %1s" %(artista_nota[(i)], nota[(i)]))
-      #print ("%-20s-+-%-7s" %("-" * 20, "-" * 7))
-
-
-
       artista_nota = []
 
       nota = []
