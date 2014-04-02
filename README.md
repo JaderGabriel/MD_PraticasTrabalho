@@ -1,7 +1,7 @@
 MD_PraticasTrabalho
 ===================
 
-Trabalho de Mineraçao de Dados, 6ºP
+<h1>Trabalho de Mineraçao de Dados, 6ºP</h1>
 
 Repositório com códidos das implementações de algoritmos de Mineração de Dados - Sugestão
 Definições do Ambiente usado no Desenvolviento:
