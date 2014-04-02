@@ -1,16 +1,18 @@
 MD_PraticasTrabalho
 ===================
 
-<h2>Trabalho de Mineraçao de Dados, 6ºP</h2>
+<h3>Trabalho de Mineraçao de Dados, 6ºP</h3>
 
 Repositório com códidos das implementações de algoritmos de Mineração de Dados - Sugestão
 Definições do Ambiente usado no Desenvolviento:
   
-  <strong>S.O.:</strong> Ubuntu x64 13.10
+  S.O.: <strong>Ubuntu x64 13.10</strong>
   
-  <strong>Python:</strong> v3.3
+  Python:<strong> v3.3</strong>
   
-  <strong>IDE:</strong> PyCharm CE 3.1
+  IDE: <strong>PyCharm CE 3.1</strong>
+
+  Use software Livre - é livre!
 
 Link de Bibliotecas e Base de Dados necessárias em algumas funções:
  
