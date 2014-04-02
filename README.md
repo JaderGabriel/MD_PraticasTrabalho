@@ -6,11 +6,11 @@ MD_PraticasTrabalho
 Repositório com códidos das implementações de algoritmos de Mineração de Dados - Sugestão
 Definições do Ambiente usado no Desenvolviento:
   
-  <strong>S.O.: Ubuntu x64 13.10
+  <strong>S.O.: Ubuntu x64 13.10 </strong>
   
   Python: v3.3
   
-  IDE: PyCharm CE 3.1 </strong>
+  IDE: PyCharm CE 3.1
 
 Link de Bibliotecas e Base de Dados necessárias em algumas funções:
  
