@@ -14,6 +14,9 @@ Definições do Ambiente usado no Desenvolviento:
 
   Use software Livre - é livre!
 
+  Codigo a ser rodado : principal.py
+
+
 Link de Bibliotecas e Base de Dados necessárias em algumas funções:
  
  http://grouplens.org/datasets/movielens/
