@@ -1,6 +1,9 @@
 import pearson
 import manipular_files
+import os
+
 d = manipular_files.gerar_dicionário_dados1()
+linha_a_processar = [0]
 
 def mais_proximos(use1, dicionario_completo, k):
     pearson_proximidade = []
@@ -32,3 +35,31 @@ def sugerir_por_knn(a_sugerir,lista_ordenada, artista):
         #float(i[0]/total,i[1]) * float(d[(i[1])][artista])
 
     print("Recomandaçao por KNN à %s de %s :\n" %(a_sugerir,artista),recomendaçao)
+def mais_proximos_filmes(todos, usuario):
+    user_chaves= []
+    todos_chaves = []
+    usuario_unico = []
+    teste = []
+    for i in usuario:
+        user_chaves.append((i[0], i[1]))
+    d_usuario=dict(user_chaves)
+    registros_totais = len(todos)
+
+    usuario_unico = buscar_pelo_usuario(id_user='%s' %'1',todos=todos,linha_final=registros_totais,linha_inicial=0)
+
+def buscar_pelo_usuario(id_user, todos,linha_final,linha_inicial):
+    lista_user = []
+    limite = 0
+    for i in range(0,50):
+        if todos[(linha_inicial)][0] == '%s' %id_user:
+           lista_user.append((todos[(i)][1],todos[(i)][2] ))
+           print(todos[(i)][0],todos[(i)][1])
+           limite += 1
+
+        else:
+            print(limite)
+            break
+        #elif todos[(i)][0] != '%s' %id_user:
+
+    return lista_user
+

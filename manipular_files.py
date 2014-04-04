@@ -60,7 +60,6 @@ def gerar_dicionario_filmes(s):
     Gera dicionário do arquivo que se receber no parametro s, desde que esse esteja na pasta '/ml-100k'
     """
     dados = csv.reader(open("ml-100k/%s" %(s),"r"))
-    print (dados)
     dados2 = []
     a_procurar = 1
     for i in dados:
